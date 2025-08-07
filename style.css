@@ -103,13 +103,16 @@ p {
 
 @media (min-width: 576px) {
   .container {
-    max-width: 540px;
+    /* max-width: 540px; */
+    max-width: 95%;
   }
 }
 
 @media (min-width: 768px) {
   .container {
-    max-width: 720px;
+    /* max-width: 720px; */
+    max-width: 95%;
+    /* width: ; */
   }
 }
 
@@ -212,14 +215,11 @@ html {
 }
 
 
-header {
+.header {
   position: sticky;
   top: 0;
   background-color: white;
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  padding: 1rem 0rem;
   z-index: 1000;
   box-shadow: 0 0 0 transparent;
   transition: box-shadow var(--transition-speed) ease;
@@ -249,10 +249,12 @@ header.scrolled {
 }
 
 .logo {
-  margin-right: 4rem;
   margin-top: -.7rem;
 }
 
+.header-nav {
+  margin-left: 3.5rem;
+}
 .header-nav ul {
   list-style: none;
   display: flex;
@@ -270,29 +272,36 @@ header.scrolled {
   color: var(--accent);
 }
 
-/* @media (min-width: 768px) { */
-@media (min-width: 768px) {
-  .header .menubars {
-    display: none;
-  }
-}
 @media (max-width: 767px) {
   header {
-    /* .container {border: 1px solid;} */
-    padding: .5rem 0rem;
+    padding: 1rem 0rem;
   }
   .header .menubars {
     margin-right: 1rem;
+  }
+  .logo {
+    margin-top: initial;
   }
   .header-nav,
   .header .btn {
     display: none !important;
   }
 }
+@media (min-width: 768px) {
+  .header .menubars {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .header {
+    padding: 1rem 2rem;
+  }
+}
 
 .hero {
     /* overflow: hidden; */
-  background: url('images/hero.png') center/cover no-repeat;
+  background: url('images/hero.webp') center/cover no-repeat;
   color: white;
   padding: 4rem 0rem;
   text-align: center;
@@ -441,7 +450,7 @@ header.scrolled {
   padding: 3rem 2rem;
   text-align: center;
   background-color: #222;
-  background: url('images/banner3.png') center/cover no-repeat;
+  background: url('images/banner3.webp') center/cover no-repeat;
   color: white;
 
   animation: fadeIn 1s ease-in-out;
